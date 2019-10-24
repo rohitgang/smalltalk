@@ -1,5 +1,5 @@
 Account subclass: CheckingAccount [
-    init: n customer: c balance: b[
+    init: n customer: c balance: b [
         number := n.
         customer := c.
         balance := b

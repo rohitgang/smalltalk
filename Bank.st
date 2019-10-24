@@ -1,13 +1,13 @@
-Object subclass: Bank[
+Object subclass: Bank [
     |accounts|
 
-    Bank class[
+    Bank class [
         new[
             ^super new init
         ]
     ]
 
-    init[
+    init [
         accounts := Set new
     ]
 
@@ -15,13 +15,13 @@ Object subclass: Bank[
         accounts add: account
     ]
 
-    accrue: rate[
+    accrue: rate [
         accounts do: [ :account | account accrue: rate]
     ]
 
     toString[
         |r| r:= ''.
-        accounts do: [ :account | r :=r, account toString, (Character n1 toString) ].
+        accounts do: [ :account | r :=r, account toString, (Character n1 toString)].
         ^r
     ]
 ]

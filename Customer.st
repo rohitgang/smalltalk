@@ -1,16 +1,16 @@
 Object subclass: Customer[
-    | name |
+    |name|
 
     Customer class[
-        new : n[
+        new : n [
             ^self new init: n 
         ]
     ]
 
-    toString[
+    toString [
         ^name
     ]
-    init : n[
+    init : n [
         name := n
     ]
 ]

@@ -1,14 +1,14 @@
-Object class: Account[
-    | number |
-    | customer |
-    | balance |
+Object subclass: Account [
+    |number|
+    |customer|
+    |balance|
 
-    Account class[
-        new: n customer: c balance: b[
+    Account class [
+        new: n customer: c balance: b [
             ^self new init:n customer: c balance: b
         ]
     ]
-    accrue : rate[
+    accrue : rate [
         ^self subclassResponsibility
     ]
 
@@ -16,16 +16,16 @@ Object class: Account[
         ^self subclassResponsibility
     ]
 
-    balance[
+    accBalance[
         ^balance
     ]
 
-    deposit : amount[
-        balance := balance + amount.
+    deposit : amount [
+        balance := balance + amount
     ]
 
-    withdraw : amount[
-        balance := balance - amount.
+    withdraw : amount [
+        balance := balance - amount
     ]
 
     toString[

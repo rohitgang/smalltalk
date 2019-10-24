@@ -1,8 +1,7 @@
-Account subclass: 'SavingsAccount' [
+Account subclass: SavingsAccount [
     | interest |
 
     init: n customer: c balance: b [
-        <category:'initialization'>
         number := n.
         customer := c.
         balance := b.
@@ -10,8 +9,8 @@ Account subclass: 'SavingsAccount' [
     ]
 
     accrue : rate[
-        balance := balance + balance*rate.
-        interest := interest + balance * rate.
+        balance := balance + (balance*rate).
+        interest := interest + (balance * rate).
     ]
 ]
 
