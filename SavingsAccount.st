@@ -1,16 +1,16 @@
 Account subclass: SavingsAccount [
-    | interest |
+    |interest|
 
     init: n customer: c balance: b [
-        number := n.
-        customer := c.
-        balance := b.
-        interest := 0.0
+        number:=n.
+        customer:=c.
+        balance:=b.
+        interest:=0.0
     ]
 
     accrue : rate[
-        balance := balance + (balance*rate).
-        interest := interest + (interest * rate).
+        balance:=balance+(balance*rate).
+        interest:=interest+(interest * rate).
     ]
 ]
 

@@ -2,7 +2,7 @@ Object subclass: Bank [
     |accounts|
 
     Bank class [
-        new[
+        new [
             ^super new init
         ]
     ]
@@ -26,8 +26,8 @@ Object subclass: Bank [
     ]
 ]
 
-|bank| bank := Bank new.
-|c| c :=Customer new: 'Ann'.
+|bank| bank:=Bank new.
+|c| c:=Customer new: 'Ann'.
 bank add: (CheckingAccount new: '01001' customer: c balance: 100.00).
 bank add: (SavingsAccount new: '01002' customer: c balance: 200.00).
 bank accrue: 0.02.

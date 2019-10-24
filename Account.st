@@ -17,16 +17,16 @@ Object subclass: Account [
         ^self subclassResponsibility
     ]
 
-    accBalance[
+    accountBalance[
         ^balance
     ]
 
     deposit : amount [
-        balance := balance + amount
+        balance:=balance+amount
     ]
 
     withdraw : amount [
-        balance := balance - amount
+        balance:=balance-amount
     ]
 
     toString[
