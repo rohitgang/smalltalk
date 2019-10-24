@@ -31,4 +31,4 @@ Object subclass: Bank [
 bank add: (CheckingAccount new: '01001' customer: c balance: 100.00).
 bank add: (SavingsAccount new: '01002' customer: c balance: 200.00).
 bank accrue: 0.02.
-bank toString printN1
+bank toString printNl
