@@ -10,7 +10,7 @@ Account subclass: SavingsAccount [
 
     accrue : rate[
         balance := balance + (balance*rate).
-        interest := interest + (balance * rate).
+        interest := interest + (interest * rate).
     ]
 ]
 

@@ -7,10 +7,11 @@ Object subclass: Customer[
         ]
     ]
 
-    toString [
-        ^name
-    ]
     init : n [
         name := n
+    ]
+    
+    toString [
+        ^name
     ]
 ]

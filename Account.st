@@ -5,14 +5,15 @@ Object subclass: Account [
 
     Account class [
         new: n customer: c balance: b [
-            ^self new init:n customer: c balance: b
+            ^self new init: n customer: c balance: b
         ]
     ]
-    accrue : rate [
+    
+    init: n customer: c balance: b [
         ^self subclassResponsibility
     ]
 
-    init: n customer: c balance: b [
+    accrue: rate [
         ^self subclassResponsibility
     ]
 

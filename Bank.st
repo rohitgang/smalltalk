@@ -8,7 +8,7 @@ Object subclass: Bank [
     ]
 
     init [
-        accounts := Set new
+        accounts:= Set new
     ]
 
     add: account[
