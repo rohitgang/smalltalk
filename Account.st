@@ -1,4 +1,5 @@
 Object subclass: Account [
+
     |number|
     |customer|
     |balance|
@@ -8,8 +9,8 @@ Object subclass: Account [
             ^self new init: n customer: c balance: b
         ]
     ]
-    
-    init: n customer: c balance: b [
+
+    init: n customer:c balance:b [
         ^self subclassResponsibility
     ]
 
@@ -17,19 +18,20 @@ Object subclass: Account [
         ^self subclassResponsibility
     ]
 
-    accountBalance[
-        ^balance
+    accountBalance [
+	    ^balance
     ]
 
-    deposit : amount [
-        balance:=balance+amount
+    deposit: amount [
+	    balance:=balance+amount
     ]
 
-    withdraw : amount [
-        balance:=balance-amount
+    withdraw: amount [
+	    balance:=balance-amount
     ]
 
-    toString[
-        ^number toString, ':', customer toString, ':', balance toString.
-    ]
- ]
+    toString [
+		^number toString, ':', customer toString, ':', balance toString.
+	]
+
+]

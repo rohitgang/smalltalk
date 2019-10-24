@@ -11,7 +11,7 @@ Object subclass: Bank [
         accounts:= Set new
     ]
 
-    add: account[
+    add: account [
         accounts add: account
     ]
 
@@ -19,13 +19,14 @@ Object subclass: Bank [
         accounts do: [ :account | account accrue: rate]
     ]
 
-    toString[
-        |r| r:= ''.
-        accounts do: [ :account | r :=r, account toString, (Character n1 toString)].
+    asString [
+        |r| r:=''.
+        accounts do: [ :account | r:=r, account toString, (Character nl toString)].
         ^r
     ]
-]
 
+]
+   
 |bank| bank:=Bank new.
 |c| c:=Customer new: 'Ann'.
 bank add: (CheckingAccount new: '01001' customer: c balance: 100.00).

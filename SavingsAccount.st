@@ -5,12 +5,12 @@ Account subclass: SavingsAccount [
         number:=n.
         customer:=c.
         balance:=b.
-        interest:=0.0
+		interest:=0.0
     ]
 
-    accrue : rate[
+    accrue: rate [
         balance:=balance+(balance*rate).
-        interest:=interest+(interest * rate).
+        interest:=interest+(interest*rate).
     ]
-]
 
+]
